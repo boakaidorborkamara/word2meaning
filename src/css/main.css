@@ -1,7 +1,8 @@
-body{
-    background-color: red;
+.constrast{
+    color: rgb(4, 94, 19);
 }
 
 #search-section {
-    background-color: "yellow" !important;
+    background: url(../assets/bg.jpg) I !important;
+    /* background-color: orange !important; */
 }
