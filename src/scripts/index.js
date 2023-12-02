@@ -1,9 +1,11 @@
 import { dom_elements } from "./DOM-Elements/dom-element";
-import "../css/main.css";
-let user_input = null;
+import { getFormInput } from "./utils/getFormInput";
+import { getDefinition } from "./utils/getDefinition";
 
-dom_elements.search_form.addEventListener("submit", (e) => {
+dom_elements.search_form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  //   getWordMeaning(){}
-  //   displayWordMeaning(){}
+  let input_field = dom_elements.search_form[0];
+  let form_input_text = getFormInput(input_field);
+  let definition = await getDefinition(form_input_text);
+  console.log("Definition", definition);
 });
